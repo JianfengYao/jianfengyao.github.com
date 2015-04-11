@@ -29,9 +29,32 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h3>
-<a name="hello,world" class="anchor" href="#hello,world"><span class="octicon octicon-link"></span></a>hello,world.</h3>
+<a name="hello,world" class="anchor" href="#hello,world"><span class="octicon octicon-link"></span></a>hello,world,Cracking the Coding Interview的第一题留个纪念</h3>
 
-<p>hello,world  </p>
+
+
+<p> Implement an algorithm to determine if a string has all unique characters.What if you can not use additional data structures?<p>
+<p>译文：实现一个算法来判断字符串中的字符是否唯一，不能使用额外的数据结构，即只可使用基本的数据结构<p>
+
+<p>首先，假定该字符集是含扩展的ASCII字符（256个），可以开一个大小为256的bool数组来表征字符的出现，鉴于每个字符的ASCII码值是唯一的，则可以<p>
+<p>将该字符的值设定为数组的位置，初始化数组为false（表示没出现过），遍历一遍字符串，判断是否之前出现过该字符，如果没有，则将对应位置为<p>
+<p>true，表示已经出现了，否则表示已经出现过。<p>
+
+
+
+<p>def isUnique(s):<p>
+<p>    a=['0']*256 <p>
+<p>    lenth=len(s)<p>
+<p>    for i in range(0,lenth):<p>
+<p>        loc=s[i]<p>
+ <p>       if a[ord(s[i])]==1:<p>
+  <p>          print('no')<p>
+    <p>        return 0<p>
+      <p>  else:<p>
+        <p>    a[ord(s[i])]=1<p>
+    <p>print('yes')<p>
+        
+</p>
 
 
 
